@@ -29,17 +29,13 @@ Every page should feel like another page in an evolving field journal.
 
 Visitors should feel:
 
-Curious.
+- Curious
+- Inspired
+- Included
+- Hopeful
+- Connected
 
-Inspired.
-
-Included.
-
-Hopeful.
-
-Connected.
-
-They should think:
+The visitor should think:
 
 "I can be part of this."
 
@@ -51,19 +47,19 @@ They should think:
 
 A physical notebook brought into the digital world.
 
-Elements:
+Visual elements:
 
-- paper-like backgrounds
-- handwritten notes
-- margin annotations
-- sketches
-- diagrams
-- arrows
-- highlights
-- imperfect lines
-- taped photos
-- sticky notes
-- field observations
+- Paper-like backgrounds
+- Handwritten notes
+- Margin annotations
+- Sketches
+- Diagrams
+- Arrows
+- Highlights
+- Imperfect lines
+- Taped photographs
+- Sticky notes
+- Field observations
 
 ---
 
@@ -71,19 +67,19 @@ Elements:
 
 Prefer:
 
-- black ink sketches
-- pencil drawings
-- hand-drawn diagrams
-- simple human characters
-- illustrated concepts
-- annotated sketches
+- Black ink sketches
+- Pencil drawings
+- Hand-drawn diagrams
+- Simple human characters
+- Illustrated concepts
+- Annotated sketches
 
 Avoid:
 
 - AI robots
-- futuristic holograms
-- generic technology imagery
-- stock illustrations
+- Futuristic holograms
+- Generic technology imagery
+- Stock illustrations
 
 ---
 
@@ -91,44 +87,43 @@ Avoid:
 
 Base:
 
-- warm paper white
-- charcoal ink
+- Warm paper white
+- Charcoal ink
 
 Accent colors:
 
-- yellow marker highlights
-- coral
-- sky blue
-- green
-- purple
+- Yellow marker highlights
+- Coral
+- Sky blue
+- Green
+- Purple
 
 Colors should appear as:
 
-- brush strokes
-- handwritten highlights
-- annotations
-- underlines
-- small moments of energy
+- Brush strokes
+- Handwritten highlights
+- Underlines
+- Small moments of energy
 
 Avoid:
 
-- large colored blocks
-- gradients
-- neon colors
+- Large solid color blocks
+- Heavy gradients
+- Neon colors
 
 ---
 
 # Layout Philosophy
 
-Avoid rigid grids.
+Avoid rigid corporate grids.
 
 Prefer:
 
-- editorial layouts
-- asymmetric compositions
-- overlapping elements
-- scrapbook-inspired sections
-- visual storytelling
+- Editorial layouts
+- Asymmetric compositions
+- Overlapping elements
+- Scrapbook-inspired sections
+- Visual storytelling
 
 The page should feel discovered, not assembled.
 
@@ -141,17 +136,15 @@ Real photographs are preferred.
 Especially:
 
 - AI For Seniors workshops
-- participants learning
-- students collaborating
-- community moments
+- Students collaborating
+- Community moments
+- Learning experiences
 
 Photos should feel documentary, not staged.
 
 ---
 
 # Typography
-
-Use:
 
 Primary:
 
@@ -161,13 +154,13 @@ Secondary:
 
 Handwritten or marker-style accents.
 
-Examples:
+Example:
 
-A headline may have:
+Main headline:
 
 "AI belongs to everyone."
 
-with a handwritten annotation:
+Handwritten annotation:
 
 "Yes, everyone."
 
@@ -179,15 +172,15 @@ Animations should feel like a notebook coming alive.
 
 Examples:
 
-- drawing lines appearing
-- handwriting reveals
-- photos sliding into place
-- subtle paper movements
+- Drawing lines appearing
+- Handwriting reveals
+- Photos sliding into place
+- Subtle paper movement
 
 Avoid:
 
-- flashy animations
-- excessive transitions
+- Flashy animations
+- Excessive transitions
 
 ---
 
@@ -195,14 +188,14 @@ Avoid:
 
 Every page should tell a story.
 
-Do not just describe programs.
+Do not simply describe programs.
 
 Show:
 
-- who participated
-- what they learned
-- what changed
-- what happened next
+- Who participated
+- What they learned
+- What changed
+- What happened next
 
 ---
 
@@ -210,7 +203,7 @@ Show:
 
 The homepage should feel like opening the first page of AI Onward's field notebook.
 
-The visitor should discover:
+The visitor discovers:
 
 Page 1:
 Why this exists.
