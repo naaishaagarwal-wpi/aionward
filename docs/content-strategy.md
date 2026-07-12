@@ -1,247 +1,145 @@
 # AI Onward Content Strategy
+Version 2.0
 
-Version 1.0
+The long-term goal is for all content to be managed in Contentful.
 
-This document defines all CMS content types.
-
-The website should eventually be powered entirely by Contentful.
-
-No page content should require code changes.
+Pages should render dynamically from reusable content models.
 
 ---
 
 # Content Types
 
-## 1. Journal Article
+## Program
+
+Fields
+
+- Name
+- Slug
+- Short Description
+- Long Description
+- Hero Image
+- Mission
+- Featured Workshops
+- Featured Testimonials
+
+Programs
+
+- AI For Seniors
+- Girls Applying AI
+- AI Visionaries
+
+---
+
+## Workshop
 
 Fields
 
 - Title
-
 - Slug
-
-- Summary
-
-- Author
-
-- Category
-
-- Publish Date
-
-- Cover Image
-
-- Article Body
-
-- Related Programs
-
-- Tags
-
-Categories
-
-- Announcement
-
-- Story
-
-- Reflection
-
-- Workshop Recap
-
-- Student Spotlight
-
-- AI News
-
-- Community
-
----
-
-## 2. Event
-
-Fields
-
-- Event Name
-
-- Slug
-
-- Event Type
-
+- Program
+- Audience
 - Date
-
 - Time
-
 - Location
-
 - Description
-
 - Registration Link
-
-- Featured Image
-
-- Gallery
-
-- Speakers
-
-- Capacity
-
+- Photos
+- Testimonials
+- Featured Workshop
 - Status
 
-Event Types
+Status
 
-- Workshop
+Upcoming
 
-- Community Event
+Completed
 
 ---
 
-## 3. Testimonial
+## Testimonial
 
 Fields
 
 - Name
-
 - Photo
-
+- Age (optional)
 - Role
-
 - Organization
-
 - Quote
-
 - Workshop
-
-- Date
-
----
-
-## 4. Gallery Album
-
-Fields
-
-- Title
-
-- Date
-
-- Description
-
-- Photos
-
-- Related Event
+- Program
 
 ---
 
-## 5. Team Member
+## Team Member
 
 Fields
 
 - Name
-
-- Photo
-
 - Role
-
+- Photo
 - Bio
-
 - LinkedIn
-
 - Email
-
-- Joined Date
+- Category
 
 Categories
 
-- Executive Leadership
+Executive Leadership
 
-- Team
+Team
 
-- Volunteer
+Volunteer
 
-- Mentor
-
----
-
-## 6. Partner
-
-Fields
-
-- Organization Name
-
-- Logo
-
-- Website
-
-- Description
-
-- Partner Type
-
-Partner Types
-
-- School
-
-- Nonprofit
-
-- Sponsor
-
-- Community
-
-- Corporate
+Advisor
 
 ---
 
-## 7. Resource
+## Gallery Album
 
 Fields
 
 - Title
-
+- Event
+- Date
+- Photos
 - Description
-
-- Resource Type
-
-- URL
-
-- Thumbnail
-
-- Audience
-
-Audience
-
-- Seniors
-
-- Students
-
-- Educators
-
-- Parents
-
-- Everyone
-
-Resource Types
-
-- Video
-
-- Guide
-
-- PDF
-
-- Website
-
-- AI Tool
-
-- Prompt Library
 
 ---
 
-# Future Content Types
+## Partner
 
-Speaker
+Fields
 
-Course
+- Organization
+- Logo
+- Website
+- Description
+- Category
 
-Volunteer Opportunity
+---
+
+## Resource
+
+Fields
+
+- Title
+- Description
+- Audience
+- Type
+- URL
+- Thumbnail
+
+---
+
+# Future
+
+Journal Articles
 
 Newsletter
 
-Research Project
+Courses
 
-Podcast
+Volunteer Opportunities
 
-Video Series
+Research

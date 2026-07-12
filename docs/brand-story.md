@@ -1,143 +1,74 @@
 # AI Onward Brand Story
-
-Version 1.0
+Version 2.0
 
 ## Our Beginning
 
-AI Onward did not begin with a business plan.
+AI Onward did not begin as an organization.
 
-It began with curiosity.
+It began with three observations.
 
-As a freshman in high school, Naaisha founded AI Visionaries after realizing that while Artificial Intelligence was rapidly transforming every industry, very few students had opportunities to explore how AI could be applied beyond coding.
+The first came when Naaisha founded AI Visionaries as a high school freshman after realizing that many students wanted to explore how Artificial Intelligence could be applied beyond coding.
 
-The goal was simple:
+The second came through conversations with her younger sister, Sayoni, and many of their friends. They noticed that girls were curious about AI but often lacked welcoming spaces where they could confidently learn, experiment, and build.
 
-Create a community where students could learn together, share ideas, build projects, and discover how AI could create positive impact.
+The third came much closer to home.
 
-As AI Visionaries grew, another pattern emerged.
+While helping their grandfather ("Daadu") and several of his friends begin using AI, Naaisha and Sayoni realized that many older adults were excited about AI but simply didn't know where to start.
 
-While talking with her younger sister, Sayoni, and many of their friends, Naaisha noticed that many girls were curious about AI but often lacked welcoming spaces where they could explore, experiment, ask questions, and build confidence.
-
-That observation became Girls Applying AI.
-
-Soon after, another opportunity appeared much closer to home.
-
-While helping their grandfather ("Daadu") learn about AI, both sisters realized that he—and many of his friends—were excited by AI but didn't know where to begin.
-
-The challenge wasn't interest.
-
-It was confidence.
-
-Technology had moved faster than many people expected, leaving an entire generation unsure how to participate.
-
-That realization inspired AI For Seniors.
-
-Three different communities.
+Three communities.
 
 Three different needs.
 
-One common belief.
+One shared belief.
 
-Everyone deserves the opportunity to understand and benefit from AI.
+Everyone deserves the opportunity to participate in the future of AI.
 
-Rather than treating these initiatives as separate projects, Naaisha and Sayoni brought them together under one shared vision.
+Rather than treating these efforts as separate projects, they brought them together under one shared vision.
 
 That vision became AI Onward.
 
 ---
 
-# Our Mission
+# Mission
 
-To help people of every age and background confidently understand, explore, and apply Artificial Intelligence.
-
----
-
-# Our Vision
-
-We imagine a future where AI is not understood by only a few.
-
-It is understood by everyone.
-
-Students.
-
-Parents.
-
-Educators.
-
-Professionals.
-
-Grandparents.
-
-Communities.
-
-Because the future of AI should be built with everyone—not just for everyone.
+To help people of every generation confidently understand, explore, and apply Artificial Intelligence.
 
 ---
 
-# Our Beliefs
+# Vision
 
-We believe curiosity is more important than expertise.
-
-We believe AI should feel approachable, not intimidating.
-
-We believe learning happens best in community.
-
-We believe diversity creates better ideas.
-
-We believe technology should strengthen human connection.
-
-We believe AI should empower people—not replace them.
+A future where AI is understood not by a select few, but by everyone willing to learn.
 
 ---
 
-# Our Programs
+# Core Beliefs
 
-## AI Visionaries
+Curiosity matters more than expertise.
 
-Helping students explore how AI can solve real-world problems across industries while building leadership, creativity, and innovation.
+Learning is better together.
 
----
+Technology should strengthen human connection.
 
-## Girls Applying AI
+AI should be approachable.
 
-Creating welcoming spaces where girls can confidently learn, build, and lead with AI while supporting one another through community and mentorship.
-
----
-
-## AI For Seniors
-
-Helping older adults discover practical, everyday ways to use AI with confidence through patient, hands-on learning.
+Everyone belongs in the future of AI.
 
 ---
 
-# Our Philosophy
+# Programs
 
-We don't believe AI belongs to one generation.
+AI Visionaries
 
-We don't believe it belongs to one profession.
+Girls Applying AI
 
-We don't believe it belongs only to experts.
+AI For Seniors
 
-AI belongs to everyone.
-
-Our role is simply to help more people discover that.
+Together, these initiatives help students, young women, and older adults discover meaningful ways to use AI.
 
 ---
 
-# Our Invitation
+# Invitation
 
-Whether you are a student taking your first step...
+Whether you are taking your first step with AI or helping others take theirs, there is a place for you at AI Onward.
 
-A parent trying to understand new technology...
-
-A senior exploring AI for the first time...
-
-An educator...
-
-A volunteer...
-
-Or simply someone who is curious...
-
-There is a place for you here.
-
-Let's move AI onward—together.
+Together, we move AI onward.

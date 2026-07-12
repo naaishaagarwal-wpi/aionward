@@ -1,155 +1,138 @@
-# Cursor Project Rules
-
-Version 1.0
+# Cursor Rules
+Version 2.0
 
 These rules apply to every file generated for AI Onward.
 
 ---
 
-# Brand
+# Identity
 
-AI Onward is a youth-led movement.
+AI Onward is a youth-led community movement.
 
-Never make it feel like a corporate AI company.
+Not a startup.
+
+Not a consulting company.
+
+Not a traditional nonprofit.
 
 ---
 
 # Design
 
-Prefer
+Create spacious editorial layouts.
 
-- White backgrounds
+Use generous whitespace.
 
-- Black typography
+Prefer asymmetry.
 
-- Hand-drawn illustrations
+Prefer organic layouts.
 
-- Organic layouts
+Use subtle hand-drawn accents.
 
-- Notebook inspiration
+Never generate corporate dashboards.
 
-- Editorial storytelling
+Never generate SaaS landing pages.
 
-- Large whitespace
+Never use robot imagery.
 
-- Human-centered design
-
-Avoid
-
-- Corporate dashboards
-
-- Robot graphics
-
-- Blue gradients
-
-- Generic AI artwork
-
-- Stock photography
-
-- Glassmorphism
-
-- Neon cyberpunk
-
-- Generic startup landing pages
+Never use stock photography.
 
 ---
 
-# Components
+# Technology
 
-Always reuse components.
+Next.js App Router
 
-Do not duplicate UI.
+TypeScript
 
-Prefer composition.
+Tailwind CSS
 
-Keep components small.
+shadcn/ui
 
----
+Reusable components
 
-# Code
-
-Use TypeScript.
-
-Use Server Components whenever possible.
-
-Keep components accessible.
-
-Use semantic HTML.
-
-Follow Next.js App Router best practices.
-
----
-
-# Styling
-
-Tailwind CSS only.
-
-Use shadcn/ui components.
-
-Customize components instead of replacing them.
-
-Animations should be subtle.
+Server Components whenever appropriate
 
 ---
 
 # Performance
 
-Optimize images.
+Fast.
 
-Lazy load galleries.
+Responsive.
 
-Keep Lighthouse scores above 90.
+Accessible.
 
-Minimize JavaScript.
+Lighthouse 90+
 
 ---
 
 # Accessibility
 
-WCAG AA minimum.
+Semantic HTML.
 
 Keyboard navigation.
 
-Visible focus states.
+Alt text.
 
-Proper heading hierarchy.
-
-Alt text for every image.
+Proper contrast.
 
 ---
 
 # Content
 
-Write in a warm, optimistic tone.
+Use authentic storytelling.
 
-Never sound corporate.
+Highlight real workshops.
 
-Avoid buzzwords.
+Highlight real participants.
+
+Highlight measurable impact.
+
+Avoid marketing buzzwords.
 
 Avoid AI hype.
 
-Focus on people.
-
-Technology supports people.
-
-People do not serve technology.
+Show evidence instead of making claims.
 
 ---
 
 # CMS
 
-Assume all content eventually comes from Contentful.
+Assume all long-term content belongs in Contentful.
 
-Never hardcode content that belongs in the CMS.
+Design components to accept CMS data.
 
-Design pages around reusable content models.
+Never hardcode workshops.
+
+Never hardcode testimonials.
 
 ---
 
-# Philosophy
+# Visual Language
 
-Every visitor should leave thinking:
+Notebook.
 
-"I can participate in AI."
+Sketchbook.
 
-That is the purpose of AI Onward.
+Editorial.
+
+Modern magazine.
+
+Human.
+
+Warm.
+
+Optimistic.
+
+Curious.
+
+Inclusive.
+
+---
+
+# Goal
+
+Every visitor should leave believing:
+
+"I belong in the future of AI."

@@ -1,16 +1,17 @@
 # AI Onward Website Architecture
-
-Version 1.0
+Version 2.0
 
 ## Mission
 
-AI Onward is a youth-led initiative that empowers people of all ages to understand, explore, and apply Artificial Intelligence.
+AI Onward is a youth-led initiative helping people of every generation confidently understand, explore, and apply Artificial Intelligence.
 
-The website should inspire visitors to participate in AI, not simply learn about AI.
+The website should inspire participation, curiosity, and community.
 
 ---
 
-# Primary Navigation
+# Navigation
+
+Launch Version 1 with only pages that contain meaningful content.
 
 Home
 
@@ -26,113 +27,99 @@ About
 
 Contact
 
-The navigation should only include pages that currently have meaningful content.
+Future sections (added only when content exists):
 
-Future sections such as Onward Journal, Gallery, Partners, and Resources should be added only when sufficient content exists.
+- Onward Journal
+- Partners
+- Resources
+- Gallery
 
-The website should never expose placeholder pages or "Coming Soon" pages.
-
----
-
-# Events
-
-The Events section contains two categories.
-
-## Workshops
-
-Educational events where participants learn AI skills.
-
-Examples:
-
-- AI for Seniors Workshop
-
-- Intro to ChatGPT
-
-- AI Productivity Workshop
-
-- Prompt Engineering Workshop
-
-- AI Career Exploration
+The website should never expose empty pages or "Coming Soon" pages.
 
 ---
 
-## Community Events
+# Home
 
-Community-building activities.
+The homepage introduces AI Onward through impact.
 
-Examples:
+Visitors should quickly understand:
 
-- Meetups
-
-- Networking
-
-- Social Gatherings
-
-- Celebration Events
-
-- Volunteer Events
+- Why AI Onward exists
+- The three initiatives
+- Real workshops
+- Real people
+- How they can get involved
 
 ---
 
-# Onward Journal
+# AI For Seniors
 
-The journal is the living story of AI Onward.
+Mission
 
-Content includes:
+Workshop history
 
-- News
+Upcoming workshops
 
-- Announcements
+Photos
 
-- Workshop Recaps
+Testimonials
 
-- Student Stories
+Request a workshop
 
-- Reflections
+---
 
-- Milestones
+# Girls Applying AI
 
-- New Initiatives
+Mission
 
-- Media Coverage
+Vision
 
-Every update should feel personal and authentic.
+Programs
+
+Future opportunities
+
+---
+
+# AI Visionaries
+
+Mission
+
+Club activities
+
+Projects
+
+Leadership
+
+Competitions
+
+---
+
+# Workshops
+
+This is one of the most important pages.
+
+Display all completed and upcoming workshops.
+
+Each workshop should include:
+
+- title
+- date
+- audience
+- description
+- photos
+- testimonials
+- location
+- related initiative
 
 ---
 
 # About
 
-## Our Story
+Our Story
 
-Why AI Onward exists.
+Executive Leadership
 
-The problem we are solving.
-
-The vision for the future.
-
----
-
-## Executive Leadership
-
-Leadership team.
-
-Founder.
-
-Board members.
-
-Advisors.
-
----
-
-## Team
-
-Students
-
-Volunteers
-
-Mentors
-
-Community Leaders
+Team
 
 ---
 
@@ -140,28 +127,24 @@ Community Leaders
 
 General inquiries
 
-Volunteer
-
-Partner with us
-
-Invite us to speak
-
 Workshop requests
 
-Media inquiries
+Volunteer
+
+Partnerships
+
+Media
 
 ---
 
 # Navigation Philosophy
 
-Visitors should understand AI Onward in this order:
+Every visitor should understand:
 
-1. Why we exist
+Why we exist.
 
-2. What we do
+Who we serve.
 
-3. What is happening
+What we have already accomplished.
 
-4. The impact we are making
-
-5. How they can participate
+How they can become part of AI Onward.

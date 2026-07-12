@@ -1,173 +1,235 @@
-# AI Onward Design Direction v1
+# AI Onward Design Direction
+Version 2.0
 
-## Brand Personality
+## Core Creative Concept
 
-AI Onward is a youth-led movement helping people of all ages understand, explore, and apply artificial intelligence.
+AI Onward should feel like:
 
-The brand should feel:
+"A beautifully illustrated field notebook documenting a movement that's already happening."
 
-- Human
+The website is not a brochure.
 
-- Curious
+It is not a corporate organization website.
 
-- Creative
+It is not a technology startup landing page.
 
-- Inclusive
+It is a living notebook capturing:
 
-- Optimistic
+- people learning
+- workshops happening
+- ideas forming
+- communities growing
+- stories unfolding
 
-- Future-focused
-
-It should NOT feel like:
-
-- A corporate AI consulting company
-
-- A technology startup dashboard
-
-- A generic nonprofit website
+Every page should feel like another page in an evolving field journal.
 
 ---
 
-## Visual Style
+# Emotional Feeling
 
-Primary inspiration:
+Visitors should feel:
 
-"An AI sketchbook brought to life."
+Curious.
 
-The website should combine:
+Inspired.
 
-- Black and white hand-drawn illustrations
+Included.
 
-- Notebook/sketchbook aesthetics
+Hopeful.
 
-- Handwritten annotations
+Connected.
 
-- Organic shapes
+They should think:
 
-- Playful imperfections
-
-- Modern editorial layouts
+"I can be part of this."
 
 ---
 
-## Color System
+# Visual Language
 
-Base:
+## Foundation
 
-- Paper white background
+A physical notebook brought into the digital world.
 
-- Ink black text
+Elements:
 
-Accent colors:
-
-- Bright yellow
-
-- Coral orange
-
-- Sky blue
-
-- Lime green
-
-- Purple
-
-Accent colors should appear as:
-
-- brush strokes
-
+- paper-like backgrounds
+- handwritten notes
+- margin annotations
+- sketches
+- diagrams
+- arrows
 - highlights
-
-- handwritten marks
-
-- small visual moments
-
-Avoid large solid color blocks.
+- imperfect lines
+- taped photos
+- sticky notes
+- field observations
 
 ---
 
-## Typography
-
-Use:
-
-- Bold modern typography for headlines
-
-- Clean readable body text
-
-- Occasional handwritten accent text
-
-The feeling should be:
-
-"Technology explained by humans."
-
----
-
-## Illustration Style
+# Illustration Style
 
 Prefer:
 
-- SVG illustrations
-
-- Hand-drawn icons
-
-- Sketch-like diagrams
-
-- Human characters
-
-- AI concepts represented visually
+- black ink sketches
+- pencil drawings
+- hand-drawn diagrams
+- simple human characters
+- illustrated concepts
+- annotated sketches
 
 Avoid:
 
-- Robot imagery
-
-- Generic AI brains
-
-- Stock photography
+- AI robots
+- futuristic holograms
+- generic technology imagery
+- stock illustrations
 
 ---
 
-## Motion
+# Color Palette
 
-Use subtle animation:
+Base:
 
-- Drawing effects
+- warm paper white
+- charcoal ink
 
-- Floating elements
+Accent colors:
 
-- Gentle movement
+- yellow marker highlights
+- coral
+- sky blue
+- green
+- purple
 
-- Handwritten reveals
+Colors should appear as:
+
+- brush strokes
+- handwritten highlights
+- annotations
+- underlines
+- small moments of energy
 
 Avoid:
 
-- Excessive animations
-
-- Distracting effects
+- large colored blocks
+- gradients
+- neon colors
 
 ---
 
-## Audience
+# Layout Philosophy
+
+Avoid rigid grids.
+
+Prefer:
+
+- editorial layouts
+- asymmetric compositions
+- overlapping elements
+- scrapbook-inspired sections
+- visual storytelling
+
+The page should feel discovered, not assembled.
+
+---
+
+# Photography
+
+Real photographs are preferred.
+
+Especially:
+
+- AI For Seniors workshops
+- participants learning
+- students collaborating
+- community moments
+
+Photos should feel documentary, not staged.
+
+---
+
+# Typography
+
+Use:
 
 Primary:
 
-Students, educators, seniors, community members.
+Modern clean typography.
 
-The website should make visitors think:
+Secondary:
 
-"I can participate in AI."
+Handwritten or marker-style accents.
+
+Examples:
+
+A headline may have:
+
+"AI belongs to everyone."
+
+with a handwritten annotation:
+
+"Yes, everyone."
 
 ---
 
-## Programs
+# Motion
 
-Three major initiatives:
+Animations should feel like a notebook coming alive.
 
-1. AI For Seniors
+Examples:
 
-Helping older adults confidently use AI in everyday life.
+- drawing lines appearing
+- handwriting reveals
+- photos sliding into place
+- subtle paper movements
 
-2. AI Visionaries
+Avoid:
 
-Students exploring AI applications across industries.
+- flashy animations
+- excessive transitions
 
-3. Girls Applying AI
+---
 
-Empowering young women to learn, create, and lead with AI.
+# Content Philosophy
+
+Every page should tell a story.
+
+Do not just describe programs.
+
+Show:
+
+- who participated
+- what they learned
+- what changed
+- what happened next
+
+---
+
+# Homepage Mental Model
+
+The homepage should feel like opening the first page of AI Onward's field notebook.
+
+The visitor should discover:
+
+Page 1:
+Why this exists.
+
+Page 2:
+Who is participating.
+
+Page 3:
+What is happening.
+
+Page 4:
+How to join.
+
+---
+
+# Design Goal
+
+AI Onward should feel less like a website.
+
+More like:
+
+A movement captured in a beautifully illustrated notebook.
