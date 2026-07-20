@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: "AI Onward",
   },
   description:
-    "A youth-led movement helping people of every generation confidently understand, explore, and apply Artificial Intelligence.",
+    "A youth-led community where students, girls, seniors, and curious minds explore AI together.",
 };
 
 /**

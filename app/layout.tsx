@@ -21,16 +21,17 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.aionward.org"),
   title: {
     default: "AI Onward",
     template: "%s · AI Onward",
   },
   description:
-    "A youth-led initiative helping people of every generation confidently understand, explore, and apply Artificial Intelligence.",
+    "A youth-led community where students, girls, seniors, and curious minds explore AI together.",
   openGraph: {
     title: "AI Onward",
     description:
-      "Helping every generation confidently understand, explore, and apply Artificial Intelligence.",
+      "A youth-led community where students, girls, seniors, and curious minds explore AI together.",
     siteName: "AI Onward",
     type: "website",
   },
