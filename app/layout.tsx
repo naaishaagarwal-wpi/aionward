@@ -3,6 +3,7 @@ import { Caveat, Figtree } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { JsonLd } from "@/components/seo/json-ld";
 import { getSiteSettings } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
@@ -28,12 +29,31 @@ export const metadata: Metadata = {
   },
   description:
     "A youth-led community where students, girls, seniors, and curious minds explore AI together.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "AI Onward",
     description:
       "A youth-led community where students, girls, seniors, and curious minds explore AI together.",
     siteName: "AI Onward",
+    url: "https://www.aionward.org",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "AI Onward — AI belongs to everyone",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Onward",
+    description:
+      "A youth-led community where students, girls, seniors, and curious minds explore AI together.",
+    images: ["/opengraph-image.png"],
   },
 };
 
@@ -50,6 +70,7 @@ export default async function RootLayout({
       className={cn("h-full antialiased", figtree.variable, caveat.variable)}
     >
       <body className="flex min-h-full flex-col font-sans text-ink">
+        <JsonLd />
         <SiteHeader siteName={site.siteName} links={site.navLinks} />
         <main className="flex flex-1 flex-col">{children}</main>
         <SiteFooter
