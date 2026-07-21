@@ -1,52 +1,68 @@
 import Link from "next/link";
 
-import { SketchDivider } from "@/components/notebook/sketch-divider";
 import type { NavLink } from "@/lib/types/content";
 
 type SiteFooterProps = {
   siteName: string;
-  tagline: string;
   links: NavLink[];
+  socialLinks: NavLink[];
 };
 
-export function SiteFooter({ siteName, tagline, links }: SiteFooterProps) {
+function FooterDivider() {
+  return (
+    <span aria-hidden="true" className="text-ink-faint">
+      |
+    </span>
+  );
+}
+
+export function SiteFooter({ siteName, links, socialLinks }: SiteFooterProps) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="mt-auto border-t border-border bg-canvas-muted">
-      <div className="mx-auto max-w-6xl px-5 py-10 sm:px-8 lg:px-10">
-        <SketchDivider className="mb-8" />
+      <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-10 lg:px-10">
+        <nav
+          aria-label="Footer"
+          className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm leading-relaxed"
+        >
+          <span className="font-semibold tracking-tight text-ink">
+            {siteName}
+          </span>
 
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
-          <div className="max-w-sm space-y-2">
-            <p className="text-lg font-semibold tracking-tight text-ink">
-              {siteName}
-            </p>
-            <p className="text-sm leading-relaxed text-ink-muted">{tagline}</p>
-            <p className="font-hand text-base text-accent-coral">
-              Everyone belongs in the future of AI.
-            </p>
-          </div>
+          {links.map((link) => (
+            <span key={link.href} className="inline-flex items-center gap-3">
+              <FooterDivider />
+              <Link
+                href={link.href}
+                className="text-ink-muted transition-colors hover:text-ink"
+              >
+                {link.label}
+              </Link>
+            </span>
+          ))}
 
-          <nav aria-label="Footer">
-            <ul className="columns-2 gap-x-10 space-y-2 sm:columns-1">
-              {links.map((link) => (
-                <li key={link.href} className="break-inside-avoid">
-                  <Link
-                    href={link.href}
-                    className="text-sm text-ink-muted transition-colors hover:text-ink"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+          {socialLinks.map((link) => (
+            <span key={link.href} className="inline-flex items-center gap-3">
+              <FooterDivider />
+              <Link
+                href={link.href}
+                className="text-ink-muted transition-colors hover:text-ink"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </Link>
+            </span>
+          ))}
 
-        <p className="mt-10 text-xs tracking-wide text-ink-faint">
-          © {year} {siteName}. A youth-led community movement.
-        </p>
+          <span className="inline-flex items-center gap-3">
+            <FooterDivider />
+            <span className="text-ink-faint">
+              © {year} {siteName}
+            </span>
+          </span>
+        </nav>
       </div>
     </footer>
   );

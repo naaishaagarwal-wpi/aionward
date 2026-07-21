@@ -54,8 +54,8 @@ export default async function RootLayout({
         <main className="flex flex-1 flex-col">{children}</main>
         <SiteFooter
           siteName={site.siteName}
-          tagline={site.tagline}
-          links={site.navLinks}
+          links={site.footerLinks}
+          socialLinks={site.socialLinks}
         />
       </body>
     </html>

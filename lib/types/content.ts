@@ -115,6 +115,8 @@ export type SiteSettings = {
   tagline: string;
   description: string;
   navLinks: NavLink[];
+  footerLinks: NavLink[];
+  socialLinks: NavLink[];
   impactStats: ImpactStat[];
   contactChannels: ContactChannel[];
   /** Primary contact email; null until confirmed */

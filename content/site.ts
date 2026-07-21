@@ -19,6 +19,16 @@ export const siteSettings: SiteSettings = {
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
+  footerLinks: [
+    { label: "About", href: "/about" },
+    { label: "Programs", href: "/girls-applying-ai" },
+    { label: "Workshops", href: "/workshops" },
+    { label: "Contact", href: "/contact" },
+  ],
+  socialLinks: [
+    { label: "Instagram", href: "https://www.instagram.com/aionward" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/aionward" },
+  ],
   impactStats: [
     { id: "stat-workshops", label: "Workshops Conducted", value: null },
     { id: "stat-participants", label: "Participants Reached", value: null },

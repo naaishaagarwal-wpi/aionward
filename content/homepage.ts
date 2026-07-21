@@ -17,7 +17,6 @@ export type HomepageHero = {
 export type HomepageOrigin = {
   opening: string;
   supporting: string;
-  exclusions: string[];
   belonging: string;
   transition: string;
   homeTitle: string;
@@ -54,9 +53,9 @@ export type HomepagePlace = {
   pathways: Array<{
     id: string;
     label: string;
-    lines: string[];
     href: string;
   }>;
+  cta: { label: string; href: string };
 };
 
 export type GetInvolvedPath = {
@@ -92,7 +91,7 @@ export const homepageContent: HomepageContent = {
     brand: "AI Onward",
     headline: "Everyone belongs\nin the future of AI.",
     annotation: "The future is something we create together.",
-    primaryCta: { label: "Help Shape the Future", href: "/contact" },
+    primaryCta: { label: "Help Shape the Future", href: "#your-place" },
     image: {
       src: "/media/events/workshops/2026-06-16-ai-seniors-westford-ma/discussion-2.jpeg",
       alt: "Naaisha listens as seniors lean in with questions during an AI For Seniors workshop in Westford.",
@@ -100,12 +99,8 @@ export const homepageContent: HomepageContent = {
   },
   origin: {
     opening: "AI is moving fast.",
-    supporting: "But the future of AI cannot belong to only a few.",
-    exclusions: [
-      "Not only engineers.",
-      "Not only companies.",
-      "Not only young people.",
-    ],
+    supporting:
+      "But the future of AI cannot belong to only a few. It cannot belong only to engineers, only to companies, or only to young people.",
     belonging: "Everyone deserves a place to learn, explore, and create.",
     transition: "That belief became AI Onward.",
     homeTitle: "It started at home.",
@@ -160,33 +155,30 @@ export const homepageContent: HomepageContent = {
   },
   place: {
     title: "Your Place in the Future.",
-    annotation: "Everyone has a role to play.",
+    annotation: "Choose where you begin.",
     pathways: [
       {
         id: "place-student",
-        label: "I am a student",
-        lines: ["Explore AI.", "Build ideas.", "Shape what's next."],
+        label: "Student",
         href: "/contact",
       },
       {
         id: "place-learner",
-        label: "I am exploring AI",
-        lines: ["Stay curious.", "Discover AI.", "Keep growing."],
+        label: "Exploring AI",
         href: "/contact",
       },
       {
         id: "place-organization",
-        label: "I represent an organization",
-        lines: ["Bring your community into the conversation."],
+        label: "Organizations",
         href: "/contact",
       },
       {
         id: "place-help",
-        label: "I want to help",
-        lines: ["Mentor.", "Volunteer.", "Create."],
+        label: "Volunteer",
         href: "/contact",
       },
     ],
+    cta: { label: "Help Shape the Future", href: "/contact" },
   },
   why: {
     title: "Why AI Onward",
