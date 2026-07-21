@@ -2,21 +2,12 @@ import type { Metadata } from "next";
 
 import { NotebookPage } from "@/components/notebook";
 import {
-  ClosingSection,
-  FeaturedWorkshopsSection,
-  GetInvolvedSection,
   HeroSection,
-  ImpactSection,
+  MomentsSection,
   OriginSection,
-  ProgramsSection,
-  WhySection,
+  PlaceSection,
 } from "@/components/sections/home";
-import {
-  getFeaturedWorkshops,
-  getHomepageContent,
-  getPrograms,
-  getSiteSettings,
-} from "@/lib/content";
+import { getHomepageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: {
@@ -27,32 +18,20 @@ export const metadata: Metadata = {
 };
 
 /**
- * Homepage — story first.
- * Impact and featured workshops render only when authentic data exists.
+ * Homepage — four-beat movement landing:
+ * belief → why it exists → proof → invitation.
+ * Older section components remain available for dedicated pages.
  */
 export default async function Home() {
-  const [home, programs, site, featuredWorkshops] = await Promise.all([
-    getHomepageContent(),
-    getPrograms(),
-    getSiteSettings(),
-    getFeaturedWorkshops(),
-  ]);
+  const home = await getHomepageContent();
 
   return (
     <NotebookPage>
-      <div className="space-y-24 sm:space-y-28">
+      <div className="space-y-20 sm:space-y-24">
         <HeroSection hero={home.hero} />
         <OriginSection origin={home.origin} />
-        <ProgramsSection
-          title={home.programsTitle}
-          annotation={home.programsAnnotation}
-          programs={programs}
-        />
-        <WhySection why={home.why} />
-        <ImpactSection stats={site.impactStats} />
-        <FeaturedWorkshopsSection workshops={featuredWorkshops} />
-        <GetInvolvedSection getInvolved={home.getInvolved} />
-        <ClosingSection closing={home.closing} />
+        <MomentsSection moments={home.moments} />
+        <PlaceSection place={home.place} />
       </div>
     </NotebookPage>
   );

@@ -1,11 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
+import { HandwrittenNote } from "@/components/notebook";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  HandwrittenNote,
-  MarginAnnotation,
-  TapedPhoto,
-} from "@/components/notebook";
 import type { HomepageHero } from "@/content/homepage";
 import { cn } from "@/lib/utils";
 
@@ -13,66 +10,63 @@ type HeroSectionProps = {
   hero: HomepageHero;
 };
 
+/**
+ * Homepage cover — magazine on desktop, story opening on mobile.
+ * Minimal copy, one CTA, one documentary image.
+ */
 export function HeroSection({ hero }: HeroSectionProps) {
   return (
     <section
       aria-labelledby="home-hero-heading"
-      className="grid items-end gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:gap-16"
+      className="grid gap-5 sm:gap-8 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-end lg:gap-16"
     >
-      <div className="space-y-7">
-        <div className="space-y-2">
-          <p className="text-sm font-medium tracking-tight text-ink">
-            AI Onward
+      <div className="flex flex-col gap-5 sm:gap-6 lg:gap-8 lg:pb-1">
+        <div className="space-y-3 sm:space-y-4">
+          <p className="text-sm font-medium tracking-tight text-ink-muted">
+            {hero.brand}
           </p>
-          <HandwrittenNote tone="ink" className="block text-xl">
-            {hero.movementLine}
-          </HandwrittenNote>
-        </div>
 
-        <div className="space-y-3">
           <h1
             id="home-hero-heading"
-            className="max-w-[12ch] text-5xl font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl"
+            className="max-w-[11ch] whitespace-pre-line text-[2.75rem] font-semibold leading-[1.02] tracking-tight text-balance sm:text-6xl sm:leading-[1.02] lg:text-7xl lg:leading-[1.0] xl:text-8xl"
           >
             {hero.headline}
           </h1>
-          <HandwrittenNote tone="coral" className="block text-2xl sm:text-3xl">
+
+          <HandwrittenNote
+            tone="coral"
+            className="block max-w-[20ch] text-xl leading-snug sm:max-w-[22ch] sm:text-2xl lg:text-[1.75rem]"
+          >
             {hero.annotation}
           </HandwrittenNote>
         </div>
 
-        <p className="max-w-xl text-lg leading-relaxed text-ink-muted">
-          {hero.supporting}
-        </p>
-
-        <div className="flex flex-wrap gap-3 pt-1">
+        <div>
           <Link
             href={hero.primaryCta.href}
             className={cn(buttonVariants({ size: "lg" }))}
           >
             {hero.primaryCta.label}
           </Link>
-          <Link
-            href={hero.secondaryCta.href}
-            className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-          >
-            {hero.secondaryCta.label}
-          </Link>
         </div>
       </div>
 
-      <div className="space-y-3 lg:pb-2">
-        <MarginAnnotation withArrow className="mb-2 hidden lg:block">
-          Field notes from workshops still unfolding.
-        </MarginAnnotation>
-        <TapedPhoto
-          image={null}
-          placeholderLabel="Workshop photo"
-          className="max-w-none"
-          sizes="(max-width: 1024px) 100vw, 38vw"
-          priority
-        />
-      </div>
+      <figure className="min-w-0">
+        {/*
+          Mobile: shorter frame so belief + CTA + interaction peek share the first viewport.
+          Crop anchors on the Naaisha ↔ seniors exchange (left-center faces), not ceiling/floor.
+        */}
+        <div className="relative aspect-[3/2] overflow-hidden border border-border bg-canvas-muted sm:aspect-[4/3] lg:aspect-[5/6] lg:min-h-[30rem]">
+          <Image
+            src={hero.image.src}
+            alt={hero.image.alt}
+            fill
+            sizes="(max-width: 1024px) 100vw, 52vw"
+            priority
+            className="object-cover object-[32%_40%] sm:object-[34%_38%] lg:object-[30%_36%]"
+          />
+        </div>
+      </figure>
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import type { Program } from "@/lib/types/content";
+import type { MediaAsset, Program } from "@/lib/types/content";
 
 /**
  * Homepage copy — sourced from docs/homepage-content.md and docs/brand-story.md.
@@ -6,34 +6,57 @@ import type { Program } from "@/lib/types/content";
  */
 
 export type HomepageHero = {
+  brand: string;
   headline: string;
-  supporting: string;
   annotation: string;
-  movementLine: string;
   primaryCta: { label: string; href: string };
-  secondaryCta: { label: string; href: string };
+  /** Canonical path under public/media — pages reference, never own copies */
+  image: MediaAsset;
 };
 
 export type HomepageOrigin = {
-  eyebrow: string;
-  title: string;
-  lead: string;
-  observations: Array<{
-    id: string;
-    label: string;
-    body: string;
-    marginNote: string;
-    href: string;
-  }>;
-  belief: string;
-  closing: string;
-  culmination: string;
+  opening: string;
+  supporting: string;
+  exclusions: string[];
+  belonging: string;
+  transition: string;
+  homeTitle: string;
+  storyBeats: Array<{ id: string; text: string }>;
+  realization: string;
+  /** Family / founding moment — canonical path under public/media */
+  image: MediaAsset;
 };
 
 export type HomepageWhy = {
   title: string;
   paragraphs: string[];
   annotation: string;
+};
+
+export type HomepageMoments = {
+  title: string;
+  lead: string;
+  bridge: string;
+  realization: string;
+  dominant: {
+    image: MediaAsset;
+    caption: string;
+  };
+  supporting: Array<{
+    image: MediaAsset;
+    caption: string;
+  }>;
+};
+
+export type HomepagePlace = {
+  title: string;
+  annotation: string;
+  pathways: Array<{
+    id: string;
+    label: string;
+    lines: string[];
+    href: string;
+  }>;
 };
 
 export type GetInvolvedPath = {
@@ -47,6 +70,8 @@ export type GetInvolvedPath = {
 export type HomepageContent = {
   hero: HomepageHero;
   origin: HomepageOrigin;
+  moments: HomepageMoments;
+  place: HomepagePlace;
   why: HomepageWhy;
   programsTitle: string;
   programsAnnotation: string;
@@ -64,45 +89,104 @@ export type HomepageContent = {
 
 export const homepageContent: HomepageContent = {
   hero: {
-    headline: "AI belongs to everyone.",
-    supporting:
-      "Helping every generation confidently understand, explore, and apply Artificial Intelligence through community, education, and real-world experiences.",
-    annotation: "Yes, everyone.",
-    movementLine: "A youth-led movement.",
-    primaryCta: { label: "Explore Our Programs", href: "#programs" },
-    secondaryCta: { label: "Join Our Next Workshop", href: "/workshops" },
+    brand: "AI Onward",
+    headline: "Everyone belongs\nin the future of AI.",
+    annotation: "The future is something we create together.",
+    primaryCta: { label: "Help Shape the Future", href: "/contact" },
+    image: {
+      src: "/media/events/workshops/2026-06-16-ai-seniors-westford-ma/discussion-2.jpeg",
+      alt: "Naaisha listens as seniors lean in with questions during an AI For Seniors workshop in Westford.",
+    },
   },
   origin: {
-    eyebrow: "How this began",
-    title: "Three observations. One shared belief.",
-    lead: "AI Onward did not begin as an organization. It began with three observations.",
-    observations: [
+    opening: "AI is moving fast.",
+    supporting: "But the future of AI cannot belong to only a few.",
+    exclusions: [
+      "Not only engineers.",
+      "Not only companies.",
+      "Not only young people.",
+    ],
+    belonging: "Everyone deserves a place to learn, explore, and create.",
+    transition: "That belief became AI Onward.",
+    homeTitle: "It started at home.",
+    storyBeats: [
       {
-        id: "obs-students",
-        label: "Students",
-        body: "Naaisha founded AI Visionaries as a high school freshman after realizing that many students wanted to explore how Artificial Intelligence could be applied beyond coding.",
-        marginNote: "AI Visionaries",
-        href: "/ai-visionaries",
+        id: "beat-naaisha",
+        text: "Naaisha discovered AI and saw how it could matter beyond code.",
       },
       {
-        id: "obs-girls",
-        label: "Girls",
-        body: "Through conversations with her younger sister, Sayoni, and many of their friends, they noticed that girls were curious about AI but often lacked welcoming spaces where they could confidently learn, experiment, and build.",
-        marginNote: "Girls Applying AI",
-        href: "/girls-applying-ai",
+        id: "beat-sayoni",
+        text: "Sayoni explored ideas and ways to serve others.",
       },
       {
-        id: "obs-seniors",
-        label: "Seniors",
-        body: "While helping their grandfather (“Daadu”) and several of his friends begin using AI, Naaisha and Sayoni realized that many older adults were excited about AI but simply didn’t know where to start.",
-        marginNote: "AI For Seniors",
-        href: "/ai-for-seniors",
+        id: "beat-daadu",
+        text: "Helping their grandfather — Daadu — showed how many people wonder where they fit in an AI future.",
       },
     ],
-    belief: "Everyone deserves the opportunity to participate in the future of AI.",
-    closing:
-      "Rather than treating these efforts as separate projects, they brought them together under one shared vision. That vision became AI Onward.",
-    culmination: "AI Onward",
+    realization: "Together they realized everyone should have a place.",
+    image: {
+      src: "/media/stories/founding-story/naaisha-sayoni-daadu.png",
+      alt: "Naaisha, Sayoni, and their grandfather Daadu together at home.",
+    },
+  },
+  moments: {
+    title: "Moments That Matter",
+    lead: "AI is not about technology alone.",
+    bridge: "It is about the moment someone realizes:",
+    realization: "I can do this.",
+    dominant: {
+      image: {
+        src: "/media/events/workshops/2026-06-22-ai-seniors-newton-ma/demo.jpg",
+        alt: "Naaisha leans in to help a senior explore AI during a workshop in Newton.",
+      },
+      caption: "Side by side in Newton.",
+    },
+    supporting: [
+      {
+        image: {
+          src: "/media/events/workshops/2026-06-16-ai-seniors-westford-ma/cover.jpeg",
+          alt: "Seniors fill a community room as Naaisha leads an AI For Seniors workshop in Westford.",
+        },
+        caption: "A full room in Westford.",
+      },
+      {
+        image: {
+          src: "/media/events/workshops/2026-06-16-ai-seniors-westford-ma/discussion-1.jpeg",
+          alt: "A senior gestures while speaking as Naaisha listens during an AI For Seniors workshop.",
+        },
+        caption: "A question from the table.",
+      },
+    ],
+  },
+  place: {
+    title: "Your Place in the Future.",
+    annotation: "Everyone has a role to play.",
+    pathways: [
+      {
+        id: "place-student",
+        label: "I am a student",
+        lines: ["Explore AI.", "Build ideas.", "Shape what's next."],
+        href: "/contact",
+      },
+      {
+        id: "place-learner",
+        label: "I am exploring AI",
+        lines: ["Stay curious.", "Discover AI.", "Keep growing."],
+        href: "/contact",
+      },
+      {
+        id: "place-organization",
+        label: "I represent an organization",
+        lines: ["Bring your community into the conversation."],
+        href: "/contact",
+      },
+      {
+        id: "place-help",
+        label: "I want to help",
+        lines: ["Mentor.", "Volunteer.", "Create."],
+        href: "/contact",
+      },
+    ],
   },
   why: {
     title: "Why AI Onward",

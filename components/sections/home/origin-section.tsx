@@ -1,86 +1,88 @@
-import Link from "next/link";
+import Image from "next/image";
 
-import {
-  HandwrittenNote,
-  HighlightMark,
-  MarginAnnotation,
-  SketchDivider,
-} from "@/components/notebook";
+import { HandwrittenNote } from "@/components/notebook";
 import type { HomepageOrigin } from "@/content/homepage";
 
 type OriginSectionProps = {
   origin: HomepageOrigin;
 };
 
+/**
+ * Why AI Onward needs to exist — belief, then the home it started from.
+ * Magazine spread on desktop; story sequence on mobile.
+ */
 export function OriginSection({ origin }: OriginSectionProps) {
   return (
-    <section aria-labelledby="home-origin-heading" className="space-y-12">
-      <SketchDivider label="beginning" />
+    <section
+      aria-labelledby="home-origin-heading"
+      className="space-y-12 sm:space-y-14"
+    >
+      <div className="max-w-3xl space-y-8 sm:space-y-10">
+        <div className="space-y-4 sm:space-y-5">
+          <h2
+            id="home-origin-heading"
+            className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl"
+          >
+            {origin.opening}
+          </h2>
+          <p className="max-w-xl text-lg leading-snug text-ink-muted sm:text-xl sm:leading-snug">
+            {origin.supporting}
+          </p>
+        </div>
 
-      <div className="max-w-2xl space-y-4">
-        <p className="text-xs font-medium tracking-[0.14em] text-ink-muted uppercase">
-          {origin.eyebrow}
+        <ul className="space-y-2 sm:space-y-3">
+          {origin.exclusions.map((line) => (
+            <li
+              key={line}
+              className="text-lg font-medium tracking-tight text-ink sm:text-xl"
+            >
+              {line}
+            </li>
+          ))}
+        </ul>
+
+        <p className="max-w-xl text-lg font-medium leading-snug tracking-tight text-ink sm:text-xl sm:leading-snug">
+          {origin.belonging}
         </p>
-        <h2
-          id="home-origin-heading"
-          className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
-        >
-          {origin.title}
-        </h2>
-        <p className="text-lg leading-relaxed text-ink-muted">{origin.lead}</p>
+
+        <HandwrittenNote tone="coral" className="block text-2xl sm:text-3xl">
+          {origin.transition}
+        </HandwrittenNote>
       </div>
 
-      <ol className="relative space-y-0">
-        {origin.observations.map((observation, index) => (
-          <li key={observation.id} className="relative pb-12 last:pb-0">
-            {index < origin.observations.length - 1 ? (
-              <span
-                aria-hidden="true"
-                className="absolute top-8 bottom-0 left-[0.7rem] w-px bg-ink/20 sm:left-[0.85rem]"
-              />
-            ) : null}
+      <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-14">
+        <div className="space-y-8 sm:space-y-10">
+          <h3 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl lg:text-4xl">
+            {origin.homeTitle}
+          </h3>
 
-            <div className="grid gap-4 sm:grid-cols-[auto_minmax(0,1fr)_minmax(0,10rem)] sm:gap-8">
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center border border-ink bg-canvas text-xs font-medium text-ink sm:h-8 sm:w-8">
-                <span className="sr-only">Observation </span>
-                {index + 1}
-              </div>
+          <ul className="max-w-md space-y-5 sm:space-y-6">
+            {origin.storyBeats.map((beat) => (
+              <li
+                key={beat.id}
+                className="text-lg leading-snug text-ink-muted sm:text-xl sm:leading-snug"
+              >
+                {beat.text}
+              </li>
+            ))}
+          </ul>
 
-              <div className="min-w-0 space-y-3">
-                <h3 className="text-xl font-semibold tracking-tight">
-                  {observation.label}
-                </h3>
-                <p className="max-w-2xl leading-relaxed text-ink-muted">
-                  {observation.body}
-                </p>
-              </div>
-
-              <MarginAnnotation className="sm:justify-self-end sm:pt-1">
-                <Link
-                  href={observation.href}
-                  className="underline decoration-ink-faint underline-offset-4 hover:decoration-highlight-yellow"
-                >
-                  {observation.marginNote}
-                </Link>
-              </MarginAnnotation>
-            </div>
-          </li>
-        ))}
-      </ol>
-
-      <div className="max-w-2xl space-y-5 border-t border-ink pt-10">
-        <p className="text-xl leading-relaxed text-ink sm:text-2xl">
-          <HighlightMark>{origin.belief}</HighlightMark>
-        </p>
-        <p className="leading-relaxed text-ink-muted">{origin.closing}</p>
-        <div className="space-y-2 pt-2">
-          <p className="text-xs font-medium tracking-[0.14em] text-ink-muted uppercase">
-            AI Visionaries → Girls Applying AI → AI For Seniors
+          <p className="max-w-md text-lg font-medium leading-snug tracking-tight text-ink sm:text-xl">
+            {origin.realization}
           </p>
-          <HandwrittenNote tone="coral" className="block text-3xl sm:text-4xl">
-            → {origin.culmination}
-          </HandwrittenNote>
         </div>
+
+        <figure className="min-w-0">
+          <div className="relative aspect-[3/4] overflow-hidden border border-border bg-canvas-muted sm:aspect-[4/5] lg:min-h-[26rem]">
+            <Image
+              src={origin.image.src}
+              alt={origin.image.alt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="object-cover object-[50%_20%]"
+            />
+          </div>
+        </figure>
       </div>
     </section>
   );
