@@ -26,8 +26,8 @@ export default async function Home() {
   const home = await getHomepageContent();
 
   return (
-    <NotebookPage>
-      <div className="space-y-20 sm:space-y-24">
+    <NotebookPage className="pb-8 sm:pb-10">
+      <div className="space-y-14 sm:space-y-16">
         <HeroSection hero={home.hero} />
         <OriginSection origin={home.origin} />
         <MomentsSection moments={home.moments} />

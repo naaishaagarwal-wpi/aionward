@@ -13,32 +13,32 @@ type MomentsSectionProps = {
  */
 export function MomentsSection({ moments }: MomentsSectionProps) {
   return (
-    <section aria-labelledby="home-moments-heading" className="space-y-10 sm:space-y-12">
-      <div className="max-w-2xl space-y-4 sm:space-y-5">
+    <section aria-labelledby="home-moments-heading" className="space-y-8 sm:space-y-9">
+      <div className="max-w-2xl space-y-3 sm:space-y-4">
         <h2
           id="home-moments-heading"
-          className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl"
+          className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
         >
           {moments.title}
         </h2>
-        <div className="space-y-2 text-lg leading-snug text-ink-muted sm:text-xl sm:leading-snug">
+        <div className="space-y-2 text-lg leading-relaxed text-ink-muted">
           <p>{moments.lead}</p>
           <p>
             {moments.bridge}{" "}
-            <HighlightMark className="text-ink font-medium">
+            <HighlightMark className="font-medium text-ink">
               {moments.realization}
             </HighlightMark>
           </p>
         </div>
       </div>
 
-      <figure className="min-w-0 space-y-2">
-        <div className="relative aspect-[16/10] overflow-hidden border border-border bg-canvas-muted sm:aspect-[2/1]">
+      <figure className="min-w-0 max-w-4xl space-y-2">
+        <div className="relative aspect-[3/2] overflow-hidden border border-border bg-canvas-muted sm:aspect-[16/10]">
           <Image
             src={moments.dominant.image.src}
             alt={moments.dominant.image.alt}
             fill
-            sizes="(max-width: 1024px) 100vw, 72rem"
+            sizes="(max-width: 1024px) 100vw, 56rem"
             className="object-cover object-[62%_40%] sm:object-[58%_42%]"
           />
         </div>
@@ -47,11 +47,11 @@ export function MomentsSection({ moments }: MomentsSectionProps) {
         </figcaption>
       </figure>
 
-      <ul className="grid gap-8 sm:grid-cols-2 sm:gap-6 lg:gap-8">
+      <ul className="grid max-w-4xl gap-6 sm:grid-cols-2 sm:gap-5">
         {moments.supporting.map((moment) => (
           <li key={moment.image.src}>
             <figure className="space-y-2">
-              <div className="relative aspect-[4/3] overflow-hidden border border-border bg-canvas-muted">
+              <div className="relative aspect-[3/2] overflow-hidden border border-border bg-canvas-muted">
                 <Image
                   src={moment.image.src}
                   alt={moment.image.alt}

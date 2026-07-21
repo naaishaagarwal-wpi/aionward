@@ -8,77 +8,64 @@ type OriginSectionProps = {
 };
 
 /**
- * Why AI Onward needs to exist — belief, then the home it started from.
- * Magazine spread on desktop; story sequence on mobile.
+ * Origin story — editorial column: belief, then the family it started from.
  */
 export function OriginSection({ origin }: OriginSectionProps) {
   return (
     <section
       aria-labelledby="home-origin-heading"
-      className="space-y-12 sm:space-y-14"
+      className="space-y-10 sm:space-y-12"
     >
-      <div className="max-w-3xl space-y-8 sm:space-y-10">
-        <div className="space-y-4 sm:space-y-5">
-          <h2
-            id="home-origin-heading"
-            className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-5xl"
-          >
-            {origin.opening}
-          </h2>
-          <p className="max-w-xl text-lg leading-snug text-ink-muted sm:text-xl sm:leading-snug">
-            {origin.supporting}
-          </p>
-        </div>
+      <div className="max-w-5xl space-y-5 sm:space-y-6">
+        <h2
+          id="home-origin-heading"
+          className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl"
+        >
+          {origin.opening}
+        </h2>
 
-        <ul className="space-y-2 sm:space-y-3">
-          {origin.exclusions.map((line) => (
-            <li
-              key={line}
-              className="text-lg font-medium tracking-tight text-ink sm:text-xl"
-            >
-              {line}
-            </li>
-          ))}
-        </ul>
+        <p className="max-w-[70ch] text-lg leading-8 text-ink-muted">
+          {origin.supporting}
+        </p>
 
-        <p className="max-w-xl text-lg font-medium leading-snug tracking-tight text-ink sm:text-xl sm:leading-snug">
+        <p className="max-w-[70ch] text-lg leading-8 text-ink-muted">
           {origin.belonging}
         </p>
 
-        <HandwrittenNote tone="coral" className="block text-2xl sm:text-3xl">
+        <HandwrittenNote tone="coral" className="block text-xl sm:text-2xl">
           {origin.transition}
         </HandwrittenNote>
       </div>
 
-      <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-14">
-        <div className="space-y-8 sm:space-y-10">
-          <h3 className="text-2xl font-semibold tracking-tight text-balance sm:text-3xl lg:text-4xl">
+      <div className="grid gap-6 sm:gap-7 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,0.9fr)] lg:items-start lg:gap-10">
+        <div className="space-y-4 sm:space-y-5">
+          <h3 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
             {origin.homeTitle}
           </h3>
 
-          <ul className="max-w-md space-y-5 sm:space-y-6">
+          <div className="space-y-4">
             {origin.storyBeats.map((beat) => (
-              <li
+              <p
                 key={beat.id}
-                className="text-lg leading-snug text-ink-muted sm:text-xl sm:leading-snug"
+                className="text-lg leading-relaxed text-ink-muted"
               >
                 {beat.text}
-              </li>
+              </p>
             ))}
-          </ul>
+          </div>
 
-          <p className="max-w-md text-lg font-medium leading-snug tracking-tight text-ink sm:text-xl">
+          <p className="text-lg leading-relaxed text-ink-muted">
             {origin.realization}
           </p>
         </div>
 
-        <figure className="min-w-0">
-          <div className="relative aspect-[3/4] overflow-hidden border border-border bg-canvas-muted sm:aspect-[4/5] lg:min-h-[26rem]">
+        <figure className="w-full max-w-xs shrink-0 lg:w-72 lg:justify-self-end">
+          <div className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-canvas-muted">
             <Image
               src={origin.image.src}
               alt={origin.image.alt}
               fill
-              sizes="(max-width: 1024px) 100vw, 42vw"
+              sizes="(max-width: 640px) 80vw, 18rem"
               className="object-cover object-[50%_20%]"
             />
           </div>
