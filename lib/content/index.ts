@@ -38,4 +38,6 @@ export { getHomepageContent } from "./homepage";
 
 export { getAboutContent } from "./about";
 
+export { getAiForSeniorsPageContent } from "./ai-for-seniors";
+
 export { getWorkshopsPageContent } from "./workshops-page";

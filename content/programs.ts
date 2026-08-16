@@ -18,12 +18,13 @@ export const programs: Program[] = [
       "Helping older adults discover practical ways to use AI with confidence through patient, hands-on workshops.",
     heroImage: null,
     mission:
-      "Helping older adults discover practical ways to use AI with confidence through patient, hands-on workshops.",
-    vision: null,
+      "Help older adults discover practical ways to use AI with confidence in their everyday lives.",
+    vision:
+      "A future where older adults aren't left behind as AI becomes part of everyday life.",
     whyExists:
-      "While helping their grandfather (“Daadu”) and several of his friends begin using AI, Naaisha and Sayoni realized that many older adults were excited about AI but simply didn’t know where to start.",
+      "While helping their grandfather (“Daadu”) and several of his friends begin using AI, Naaisha and Sayoni realized that many older adults were excited about AI but simply didn't know where to start.",
     originNote:
-      "AI For Seniors began at home — with patience, curiosity, and the belief that older adults belong in the future of AI.",
+      "AI For Seniors began at home—with patience, curiosity, and the belief that older adults belong in the future of AI.",
     activities: [],
     projects: [],
     leadershipItems: [],
