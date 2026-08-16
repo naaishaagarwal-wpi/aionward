@@ -13,23 +13,28 @@ export function TeamMemberCard({ member, className }: TeamMemberCardProps) {
   return (
     <article
       className={cn(
-        "grid gap-5 border-b border-border py-8 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)]",
+        "grid gap-5 py-8 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:gap-8 sm:py-10",
         className
       )}
     >
       <TapedPhoto
         image={member.photo}
         placeholderLabel={member.name}
-        className="max-w-[10rem]"
-        sizes="10rem"
+        className="max-w-[11rem]"
+        sizes="11rem"
+        aspectClassName="aspect-[3/4]"
+        showCaption={false}
+        imageClassName="object-top"
       />
       <div className="space-y-3">
-        <div>
+        <div className="space-y-1">
           <h3 className="text-xl font-semibold tracking-tight">{member.name}</h3>
           <p className="text-sm text-ink-muted">{member.role}</p>
         </div>
         {member.bio ? (
-          <p className="leading-relaxed text-ink-muted">{member.bio}</p>
+          <p className="max-w-2xl text-sm leading-relaxed text-ink-muted sm:text-base">
+            {member.bio}
+          </p>
         ) : null}
         {member.linkedIn ? (
           <Link
@@ -49,11 +54,18 @@ type TeamListProps = {
   members: TeamMember[];
   title: string;
   headingId: string;
+  /** Keep the section heading visible when no members are confirmed yet. */
+  allowEmpty?: boolean;
 };
 
-/** Renders nothing when there are no team members. */
-export function TeamList({ members, title, headingId }: TeamListProps) {
-  if (members.length === 0) return null;
+/** Renders nothing when there are no team members, unless allowEmpty is set. */
+export function TeamList({
+  members,
+  title,
+  headingId,
+  allowEmpty = false,
+}: TeamListProps) {
+  if (members.length === 0 && !allowEmpty) return null;
 
   return (
     <section aria-labelledby={headingId} className="space-y-2">
@@ -63,13 +75,18 @@ export function TeamList({ members, title, headingId }: TeamListProps) {
       >
         {title}
       </h2>
-      <ul>
-        {members.map((member) => (
-          <li key={member.id}>
-            <TeamMemberCard member={member} />
-          </li>
-        ))}
-      </ul>
+      {members.length > 0 ? (
+        <ul>
+          {members.map((member) => (
+            <li
+              key={member.id}
+              className="border-b border-border last:border-b-0"
+            >
+              <TeamMemberCard member={member} />
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </section>
   );
 }

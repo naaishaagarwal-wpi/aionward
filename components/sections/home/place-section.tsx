@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { ContentLink } from "@/components/content/content-link";
 import { buttonVariants } from "@/components/ui/button";
 import type { HomepagePlace } from "@/content/homepage";
 import { cn } from "@/lib/utils";
@@ -33,15 +32,20 @@ export function PlaceSection({ place }: PlaceSectionProps) {
       <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 sm:gap-3">
         {place.pathways.map((pathway) => (
           <li key={pathway.id}>
-            <Link
+            <ContentLink
               href={pathway.href}
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "h-auto w-full justify-center px-4 py-3 text-base font-semibold"
+                "h-auto w-full flex-col justify-center gap-1 whitespace-normal px-4 py-3"
               )}
             >
-              {pathway.label}
-            </Link>
+              <span className="text-xs font-medium tracking-[0.12em] text-ink-muted uppercase">
+                {pathway.label}
+              </span>
+              <span className="text-base font-semibold text-ink">
+                {pathway.ctaLabel}
+              </span>
+            </ContentLink>
           </li>
         ))}
       </ul>

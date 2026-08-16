@@ -1,3 +1,4 @@
+import { siteSettings } from "@/content/site";
 import type { MediaAsset, Program } from "@/lib/types/content";
 
 /**
@@ -53,6 +54,7 @@ export type HomepagePlace = {
   pathways: Array<{
     id: string;
     label: string;
+    ctaLabel: string;
     href: string;
   }>;
   cta: { label: string; href: string };
@@ -160,22 +162,26 @@ export const homepageContent: HomepageContent = {
       {
         id: "place-student",
         label: "Student",
-        href: "/contact",
+        ctaLabel: "Join the Leadership Team",
+        href: siteSettings.forms.join,
       },
       {
         id: "place-learner",
         label: "Exploring AI",
-        href: "/contact",
+        ctaLabel: "Contact Us",
+        href: siteSettings.forms.contact,
       },
       {
         id: "place-organization",
         label: "Organizations",
-        href: "/contact",
+        ctaLabel: "Partnership Inquiries",
+        href: siteSettings.forms.partnerships,
       },
       {
         id: "place-help",
         label: "Volunteer",
-        href: "/contact",
+        ctaLabel: "Request a Workshop",
+        href: siteSettings.forms.workshops,
       },
     ],
     cta: { label: "Help Shape the Future", href: "/contact" },
@@ -199,25 +205,25 @@ export const homepageContent: HomepageContent = {
         id: "path-volunteer",
         label: "Volunteer",
         description: "Join as a student volunteer or community helper.",
-        href: "/contact",
+        href: siteSettings.forms.join,
       },
       {
         id: "path-partner",
         label: "Partner With Us",
         description: "Collaborate as a community or organizational partner.",
-        href: "/contact",
+        href: siteSettings.forms.partnerships,
       },
       {
         id: "path-host",
         label: "Host a Workshop",
         description: "Invite AI Onward to host a workshop in your community.",
-        href: "/contact",
+        href: siteSettings.forms.workshops,
       },
       {
         id: "path-speak",
         label: "Invite Us to Speak",
         description: null,
-        href: "/contact",
+        href: siteSettings.forms.workshops,
       },
     ],
   },

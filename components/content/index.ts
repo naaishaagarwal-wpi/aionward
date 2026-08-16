@@ -8,4 +8,5 @@ export {
   MediaSection,
 } from "./program-sections";
 export { TeamMemberCard, TeamList } from "./team-member-card";
-export { ContactForm } from "./contact-form";
+export { ContentLink } from "./content-link";
+export { ContactChannels } from "./contact-channels";

@@ -6,6 +6,7 @@ type SiteFooterProps = {
   siteName: string;
   links: NavLink[];
   socialLinks: NavLink[];
+  email: string;
 };
 
 function FooterDivider() {
@@ -16,7 +17,12 @@ function FooterDivider() {
   );
 }
 
-export function SiteFooter({ siteName, links, socialLinks }: SiteFooterProps) {
+export function SiteFooter({
+  siteName,
+  links,
+  socialLinks,
+  email,
+}: SiteFooterProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -55,6 +61,16 @@ export function SiteFooter({ siteName, links, socialLinks }: SiteFooterProps) {
               </Link>
             </span>
           ))}
+
+          <span className="inline-flex items-center gap-3">
+            <FooterDivider />
+            <Link
+              href={`mailto:${email}`}
+              className="text-ink-muted transition-colors hover:text-ink"
+            >
+              {email}
+            </Link>
+          </span>
 
           <span className="inline-flex items-center gap-3">
             <FooterDivider />

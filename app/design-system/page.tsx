@@ -233,7 +233,7 @@ export default function DesignSystemPage() {
         <Section
           id="divider"
           title="SketchDivider"
-          description="Subtle ink sketches between sections. Imperfect strokes — not hairline rules or notebook lines."
+          description="Straight rules between sections. Optional handwritten label in the middle — not a decorative squiggle."
         >
           <div className="space-y-8">
             <div>

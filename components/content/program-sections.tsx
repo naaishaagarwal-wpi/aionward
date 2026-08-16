@@ -1,7 +1,6 @@
-import Link from "next/link";
-
-import { buttonVariants } from "@/components/ui/button";
+import { ContentLink } from "@/components/content/content-link";
 import { PhotoGrid } from "@/components/content/photo-grid";
+import { buttonVariants } from "@/components/ui/button";
 import {
   HandwrittenNote,
   MarginAnnotation,
@@ -47,12 +46,12 @@ export function ProgramHero({
           {program.shortDescription}
         </p>
         {cta ? (
-          <Link
+          <ContentLink
             href={cta.href}
             className={cn(buttonVariants({ size: "lg" }))}
           >
             {cta.label}
-          </Link>
+          </ContentLink>
         ) : null}
       </div>
 

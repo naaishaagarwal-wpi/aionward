@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { ContactForm } from "@/components/content";
+import { ContactChannels } from "@/components/content";
 import {
   HandwrittenNote,
   NotebookPage,
@@ -22,7 +22,7 @@ export default async function ContactPage() {
       <div className="space-y-16 sm:space-y-20">
         <header className="max-w-2xl space-y-4">
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Contact
+            Contact AI Onward
           </h1>
           <HandwrittenNote tone="coral" className="block text-2xl">
             Tell us how you want to get involved.
@@ -34,40 +34,18 @@ export default async function ContactPage() {
         </header>
 
         <section aria-labelledby="contact-topics" className="space-y-8">
-          <SketchDivider label="topics" />
+          <SketchDivider label="paths" />
           <h2
             id="contact-topics"
             className="text-3xl font-semibold tracking-tight sm:text-4xl"
           >
             How can we help?
           </h2>
-          <ul className="divide-y divide-border border-y border-border">
-            {site.contactChannels.map((channel) => (
-              <li
-                key={channel.id}
-                className="grid gap-2 py-5 sm:grid-cols-[minmax(0,14rem)_minmax(0,1fr)] sm:gap-8"
-              >
-                <p className="font-semibold tracking-tight text-ink">
-                  {channel.label}
-                </p>
-                <p className="text-ink-muted">{channel.description}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section aria-labelledby="contact-form-heading" className="space-y-8">
-          <SketchDivider label="message" />
-          <h2
-            id="contact-form-heading"
-            className="text-3xl font-semibold tracking-tight sm:text-4xl"
-          >
-            Send a message
-          </h2>
-          <ContactForm
-            channels={site.contactChannels}
-            contactEmail={site.contactEmail}
-          />
+          <ContactChannels channels={site.contactChannels} />
+          <p className="max-w-xl text-sm leading-relaxed text-ink-muted">
+            When you use one of our forms, Google Forms collects the information
+            you submit so we can respond to your inquiry.
+          </p>
         </section>
       </div>
     </NotebookPage>
