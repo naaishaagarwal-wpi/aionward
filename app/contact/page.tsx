@@ -5,6 +5,7 @@ import {
   HandwrittenNote,
   NotebookPage,
   SketchDivider,
+  StickyNote,
 } from "@/components/notebook";
 import { getSiteSettings } from "@/lib/content";
 
@@ -42,10 +43,18 @@ export default async function ContactPage() {
             How can we help?
           </h2>
           <ContactChannels channels={site.contactChannels} />
-          <p className="max-w-xl text-sm leading-relaxed text-ink-muted">
-            When you use one of our forms, Google Forms collects the information
-            you submit so we can respond to your inquiry.
-          </p>
+          <StickyNote className="max-w-xl">
+            <h2
+              id="contact-disclaimer"
+              className="mb-1.5 text-xs font-medium tracking-[0.14em] text-ink-muted uppercase"
+            >
+              Disclaimer
+            </h2>
+            <p className="text-sm leading-relaxed text-ink-muted">
+              When you use one of our forms, Google Forms collects the
+              information you submit so we can respond to your inquiry.
+            </p>
+          </StickyNote>
         </section>
       </div>
     </NotebookPage>

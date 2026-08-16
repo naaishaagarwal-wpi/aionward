@@ -7,9 +7,14 @@ import { cn } from "@/lib/utils";
 type TeamMemberCardProps = {
   member: TeamMember;
   className?: string;
+  nameAs?: "h3" | "h4";
 };
 
-export function TeamMemberCard({ member, className }: TeamMemberCardProps) {
+export function TeamMemberCard({
+  member,
+  className,
+  nameAs: NameTag = "h3",
+}: TeamMemberCardProps) {
   return (
     <article
       className={cn(
@@ -28,7 +33,9 @@ export function TeamMemberCard({ member, className }: TeamMemberCardProps) {
       />
       <div className="space-y-3">
         <div className="space-y-1">
-          <h3 className="text-xl font-semibold tracking-tight">{member.name}</h3>
+          <NameTag className="text-xl font-semibold tracking-tight">
+            {member.name}
+          </NameTag>
           <p className="text-sm text-ink-muted">{member.role}</p>
         </div>
         {member.bio ? (
@@ -54,6 +61,7 @@ type TeamListProps = {
   members: TeamMember[];
   title: string;
   headingId: string;
+  headingLevel?: "h2" | "h3";
   /** Keep the section heading visible when no members are confirmed yet. */
   allowEmpty?: boolean;
 };
@@ -63,18 +71,22 @@ export function TeamList({
   members,
   title,
   headingId,
+  headingLevel = "h2",
   allowEmpty = false,
 }: TeamListProps) {
   if (members.length === 0 && !allowEmpty) return null;
 
+  const Heading = headingLevel;
+  const headingClass =
+    headingLevel === "h3"
+      ? "text-2xl font-semibold tracking-tight sm:text-3xl"
+      : "text-3xl font-semibold tracking-tight sm:text-4xl";
+
   return (
     <section aria-labelledby={headingId} className="space-y-2">
-      <h2
-        id={headingId}
-        className="text-3xl font-semibold tracking-tight sm:text-4xl"
-      >
+      <Heading id={headingId} className={headingClass}>
         {title}
-      </h2>
+      </Heading>
       {members.length > 0 ? (
         <ul>
           {members.map((member) => (
@@ -82,7 +94,10 @@ export function TeamList({
               key={member.id}
               className="border-b border-border last:border-b-0"
             >
-              <TeamMemberCard member={member} />
+              <TeamMemberCard
+                member={member}
+                nameAs={headingLevel === "h3" ? "h4" : "h3"}
+              />
             </li>
           ))}
         </ul>

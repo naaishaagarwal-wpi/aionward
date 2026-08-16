@@ -29,9 +29,9 @@ export function MainNav({ links, className }: MainNavProps) {
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
                 className={cn(
-                  "text-sm tracking-wide text-ink-muted transition-colors hover:text-ink",
+                  "text-base font-medium text-ink transition-colors hover:underline hover:decoration-ink-faint hover:underline-offset-6",
                   isActive &&
-                    "text-ink underline decoration-highlight-yellow decoration-2 underline-offset-6"
+                    "underline decoration-highlight-yellow decoration-2 underline-offset-6"
                 )}
               >
                 {link.label}
