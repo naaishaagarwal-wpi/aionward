@@ -7,7 +7,9 @@
 export type WorkshopStatus = "upcoming" | "completed";
 
 export type TeamCategory =
+  | "co-founder"
   | "executive"
+  | "board"
   | "team"
   | "volunteer"
   | "advisor";
@@ -106,8 +108,26 @@ export type ContactChannel = {
   id: string;
   label: string;
   description: string;
-  /** mailto: or external URL; null until a real address exists */
-  href: string | null;
+  /** mailto: address, Google Form URL, or internal path */
+  href: string;
+  /** Button label for form/external links; omit for mailto channels */
+  actionLabel: string | null;
+};
+
+export type SiteEmails = {
+  general: string;
+  contact: string;
+  partnerships: string;
+  workshops: string;
+  join: string;
+  media: string;
+};
+
+export type SiteForms = {
+  contact: string;
+  workshops: string;
+  partnerships: string;
+  join: string;
 };
 
 export type SiteSettings = {
@@ -119,6 +139,6 @@ export type SiteSettings = {
   socialLinks: NavLink[];
   impactStats: ImpactStat[];
   contactChannels: ContactChannel[];
-  /** Primary contact email; null until confirmed */
-  contactEmail: string | null;
+  emails: SiteEmails;
+  forms: SiteForms;
 };

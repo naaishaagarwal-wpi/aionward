@@ -70,13 +70,14 @@ export default async function RootLayout({
       className={cn("h-full antialiased", figtree.variable, caveat.variable)}
     >
       <body className="flex min-h-full flex-col font-sans text-ink">
-        <JsonLd />
+        <JsonLd email={site.emails.general} />
         <SiteHeader siteName={site.siteName} links={site.navLinks} />
         <main className="flex flex-1 flex-col">{children}</main>
         <SiteFooter
           siteName={site.siteName}
           links={site.footerLinks}
           socialLinks={site.socialLinks}
+          email={site.emails.general}
         />
       </body>
     </html>

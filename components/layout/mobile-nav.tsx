@@ -14,13 +14,15 @@ type MobileNavProps = {
 export function MobileNav({ links }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const [closedForPath, setClosedForPath] = useState(pathname);
   const panelId = useId();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
+  if (pathname !== closedForPath) {
+    setClosedForPath(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!open) return;

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { buttonVariants } from "@/components/ui/button";
 import {
+  ContentLink,
   MediaSection,
   ProgramHero,
   TextBlockSection,
@@ -17,6 +17,7 @@ import {
 } from "@/components/notebook";
 import {
   getProgramBySlug,
+  getSiteSettings,
   getTestimonialsByProgram,
   getWorkshops,
 } from "@/lib/content";
@@ -29,13 +30,17 @@ export const metadata: Metadata = {
 };
 
 export default async function AiForSeniorsPage() {
-  const program = await getProgramBySlug("ai-for-seniors");
+  const [program, site] = await Promise.all([
+    getProgramBySlug("ai-for-seniors"),
+    getSiteSettings(),
+  ]);
   if (!program) notFound();
 
   const [workshops, testimonials] = await Promise.all([
     getWorkshops({ programSlug: program.slug }),
     getTestimonialsByProgram(program.slug),
   ]);
+  const workshopRequestHref = site.forms.workshops;
 
   const upcoming = workshops.filter((w) => w.status === "upcoming");
   const completed = workshops.filter((w) => w.status === "completed");
@@ -47,7 +52,7 @@ export default async function AiForSeniorsPage() {
         <ProgramHero
           program={program}
           annotation="Patience. Practice. Belonging."
-          cta={{ label: "Request a workshop", href: "/contact" }}
+          cta={{ label: "Request a workshop", href: workshopRequestHref }}
         />
 
         {program.whyExists || program.originNote ? (
@@ -129,12 +134,12 @@ export default async function AiForSeniorsPage() {
             Invite AI Onward to host a patient, hands-on workshop for older
             adults where you live, learn, or gather.
           </p>
-          <Link
-            href="/contact"
+          <ContentLink
+            href={workshopRequestHref}
             className={cn(buttonVariants({ size: "lg" }))}
           >
             Request a workshop
-          </Link>
+          </ContentLink>
         </section>
       </div>
     </NotebookPage>

@@ -11,6 +11,11 @@ type TapedPhotoProps = {
   placeholderLabel?: string;
   sizes?: string;
   priority?: boolean;
+  /** Frame ratio. Workshop photos default to 4/3; portraits may use 3/4. */
+  aspectClassName?: string;
+  /** Hide figcaption when the name is already shown beside the photo. */
+  showCaption?: boolean;
+  imageClassName?: string;
 };
 
 /**
@@ -18,8 +23,9 @@ type TapedPhotoProps = {
  * When `image` is null, renders a clearly marked placeholder that keeps layout
  * stable until real workshop/community/team photos are added.
  *
- * Accessibility: visible figcaption is the accessible name; Image uses empty
- * alt to avoid duplicate announcements.
+ * When showCaption is true, the figcaption is the accessible name and Image
+ * uses empty alt to avoid duplicate announcements. When false, Image uses
+ * the asset alt text.
  */
 export function TapedPhoto({
   image,
@@ -27,20 +33,29 @@ export function TapedPhoto({
   placeholderLabel = "Photo forthcoming",
   sizes = "(max-width: 768px) 100vw, 40vw",
   priority = false,
+  aspectClassName = "aspect-[4/3]",
+  showCaption = true,
+  imageClassName,
 }: TapedPhotoProps) {
   const caption = image?.alt?.trim() || (image ? "Documentary photograph" : null);
+  const imageAlt = showCaption ? "" : image?.alt?.trim() || "";
 
   return (
     <figure className={cn("w-full max-w-md", className)}>
-      <div className="relative aspect-[4/3] overflow-hidden border border-border bg-canvas-muted">
+      <div
+        className={cn(
+          "relative overflow-hidden border border-border bg-canvas-muted",
+          aspectClassName
+        )}
+      >
         {image ? (
           <Image
             src={image.src}
-            alt=""
+            alt={imageAlt}
             fill
             sizes={sizes}
             priority={priority}
-            className="object-cover"
+            className={cn("object-cover", imageClassName)}
           />
         ) : (
           <div
@@ -62,7 +77,7 @@ export function TapedPhoto({
         )}
       </div>
 
-      {caption ? (
+      {showCaption && caption ? (
         <figcaption className="mt-2 text-sm text-ink-muted">{caption}</figcaption>
       ) : null}
     </figure>

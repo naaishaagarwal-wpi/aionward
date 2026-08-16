@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { ContentLink } from "@/components/content/content-link";
 import {
   HandwrittenNote,
   SketchDivider,
@@ -30,7 +29,7 @@ export function GetInvolvedSection({ getInvolved }: GetInvolvedSectionProps) {
       <ul className="divide-y divide-border border-y border-border">
         {getInvolved.paths.map((path) => (
           <li key={path.id}>
-            <Link
+            <ContentLink
               href={path.href}
               className="group flex flex-col gap-1 py-6 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
             >
@@ -42,7 +41,7 @@ export function GetInvolvedSection({ getInvolved }: GetInvolvedSectionProps) {
                   {path.description}
                 </span>
               ) : null}
-            </Link>
+            </ContentLink>
           </li>
         ))}
       </ul>
