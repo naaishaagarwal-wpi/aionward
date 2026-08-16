@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ContentLink, TeamList } from "@/components/content";
 import {
   HandwrittenNote,
+  HighlightMark,
   NotebookPage,
   SketchDivider,
 } from "@/components/notebook";
@@ -27,34 +28,61 @@ export default async function AboutPage() {
   return (
     <NotebookPage>
       <div className="space-y-16 sm:space-y-20">
-        <header className="max-w-2xl space-y-4">
-          <p className="text-xs font-medium tracking-[0.14em] text-ink-muted uppercase">
-            {about.eyebrow}
-          </p>
+        <header>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
             {about.title}
           </h1>
-          <p className="text-lg leading-relaxed text-ink-muted">{about.lead}</p>
         </header>
 
-        <TeamList
-          members={coFounders}
-          title="Co-Founders"
-          headingId="about-co-founders"
-        />
+        <section aria-labelledby="about-mission" className="space-y-4">
+          <h2
+            id="about-mission"
+            className="font-hand text-2xl font-normal tracking-wide text-accent-coral sm:text-3xl"
+          >
+            {about.missionTitle}
+          </h2>
+          <p className="max-w-4xl text-2xl font-semibold leading-snug tracking-tight text-ink sm:text-3xl sm:leading-snug">
+            <HighlightMark>{about.mission}</HighlightMark>
+          </p>
+        </section>
 
-        <TeamList
-          members={executives}
-          title="Executive Leadership"
-          headingId="about-leadership"
-        />
+        <section aria-labelledby="about-team" className="space-y-10 sm:space-y-12">
+          <div className="space-y-5">
+            <h2
+              id="about-team"
+              className="text-3xl font-semibold tracking-tight sm:text-4xl"
+            >
+              {about.meetTitle}
+            </h2>
+            <p className="max-w-none text-left text-lg leading-relaxed text-ink-muted sm:text-xl sm:leading-relaxed">
+              {about.meetIntro}
+            </p>
+          </div>
 
-        <TeamList
-          members={board}
-          title="Board of Directors"
-          headingId="about-board"
-          allowEmpty
-        />
+          <SketchDivider />
+
+          <TeamList
+            members={coFounders}
+            title="Co-Founders"
+            headingId="about-co-founders"
+            headingLevel="h3"
+          />
+
+          <TeamList
+            members={executives}
+            title="Executive Leadership"
+            headingId="about-leadership"
+            headingLevel="h3"
+          />
+
+          <TeamList
+            members={board}
+            title="Board of Directors"
+            headingId="about-board"
+            headingLevel="h3"
+            allowEmpty
+          />
+        </section>
 
         <section className="max-w-2xl space-y-5">
           <SketchDivider />

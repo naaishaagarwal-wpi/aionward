@@ -49,7 +49,7 @@ export function MobileNav({ links }: MobileNavProps) {
       <button
         ref={menuButtonRef}
         type="button"
-        className="inline-flex h-10 items-center gap-2 border border-border bg-canvas px-3 text-sm text-ink"
+        className="inline-flex h-10 items-center gap-2 border border-border bg-canvas px-3 text-base font-medium text-ink"
         aria-expanded={open}
         aria-controls={panelId}
         aria-haspopup="dialog"
@@ -121,7 +121,7 @@ export function MobileNav({ links }: MobileNavProps) {
                       href={link.href}
                       aria-current={isActive ? "page" : undefined}
                       className={cn(
-                        "block rounded-sm px-2 py-2.5 text-base text-ink transition-colors hover:bg-highlight-yellow/40",
+                        "block rounded-sm px-2 py-2.5 text-base font-medium text-ink transition-colors hover:bg-highlight-yellow/40",
                         isActive && "bg-highlight-yellow/50"
                       )}
                       onClick={() => setOpen(false)}

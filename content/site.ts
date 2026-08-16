@@ -42,8 +42,8 @@ export const siteSettings: SiteSettings = {
     { label: "Contact", href: "/contact" },
   ],
   socialLinks: [
-    { label: "Instagram", href: "https://www.instagram.com/aionward" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/company/aionward" },
+    { label: "Instagram", href: "https://www.instagram.com/aionwardorg/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/ai-onward/" },
   ],
   impactStats: [
     { id: "stat-workshops", label: "Workshops Conducted", value: null },

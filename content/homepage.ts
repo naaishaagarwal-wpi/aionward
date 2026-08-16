@@ -50,11 +50,10 @@ export type HomepageMoments = {
 
 export type HomepagePlace = {
   title: string;
-  annotation: string;
+  annotation: string | null;
   pathways: Array<{
     id: string;
     label: string;
-    ctaLabel: string;
     href: string;
   }>;
   cta: { label: string; href: string };
@@ -157,31 +156,27 @@ export const homepageContent: HomepageContent = {
   },
   place: {
     title: "Your Place in the Future.",
-    annotation: "Choose where you begin.",
+    annotation: null,
     pathways: [
       {
-        id: "place-student",
-        label: "Student",
-        ctaLabel: "Join the Leadership Team",
+        id: "place-join",
+        label: "Join the Leadership Team",
         href: siteSettings.forms.join,
       },
       {
-        id: "place-learner",
-        label: "Exploring AI",
-        ctaLabel: "Contact Us",
-        href: siteSettings.forms.contact,
+        id: "place-workshop",
+        label: "Request a Workshop",
+        href: siteSettings.forms.workshops,
       },
       {
-        id: "place-organization",
-        label: "Organizations",
-        ctaLabel: "Partnership Inquiries",
+        id: "place-partnerships",
+        label: "Partnership Inquiries",
         href: siteSettings.forms.partnerships,
       },
       {
-        id: "place-help",
-        label: "Volunteer",
-        ctaLabel: "Request a Workshop",
-        href: siteSettings.forms.workshops,
+        id: "place-contact",
+        label: "Contact Us",
+        href: siteSettings.forms.contact,
       },
     ],
     cta: { label: "Help Shape the Future", href: "/contact" },
