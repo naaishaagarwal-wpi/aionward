@@ -40,4 +40,6 @@ export { getAboutContent } from "./about";
 
 export { getAiForSeniorsPageContent } from "./ai-for-seniors";
 
+export { getAiVisionariesPageContent } from "./ai-visionaries";
+
 export { getWorkshopsPageContent } from "./workshops-page";
