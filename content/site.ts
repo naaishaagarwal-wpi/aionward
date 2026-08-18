@@ -37,8 +37,6 @@ export const siteSettings: SiteSettings = {
   ],
   footerLinks: [
     { label: "About", href: "/about" },
-    { label: "Programs", href: "/girls-applying-ai" },
-    { label: "Workshops", href: "/workshops" },
     { label: "Contact", href: "/contact" },
   ],
   socialLinks: [
