@@ -42,4 +42,6 @@ export { getAiForSeniorsPageContent } from "./ai-for-seniors";
 
 export { getAiVisionariesPageContent } from "./ai-visionaries";
 
+export { getGirlsApplyingAiPageContent } from "./girls-applying-ai";
+
 export { getWorkshopsPageContent } from "./workshops-page";

@@ -1,61 +1,41 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 
+import { NotebookPage } from "@/components/notebook";
+import { IdentityRail } from "@/components/sections/girls-applying-ai/identity-rail";
 import {
-  ProgramHero,
-  StringListSection,
-  TextBlockSection,
-} from "@/components/content";
+  ConnectSection,
+  InspiredSection,
+  ShareSection,
+  TogetherSection,
+} from "@/components/sections/girls-applying-ai/program-story";
 import {
-  NotebookPage,
-  SketchDivider,
-} from "@/components/notebook";
-import { getProgramBySlug } from "@/lib/content";
+  getGirlsApplyingAiPageContent,
+  getSiteSettings,
+} from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Girls Applying AI",
   description:
-    "A welcoming community where girls explore, create, and lead with Artificial Intelligence.",
+    "Bringing together young women who are already applying AI to share, connect, and learn from one another.",
 };
 
 export default async function GirlsApplyingAiPage() {
-  const program = await getProgramBySlug("girls-applying-ai");
-  if (!program) notFound();
+  const [content, site] = await Promise.all([
+    getGirlsApplyingAiPageContent(),
+    getSiteSettings(),
+  ]);
+  const requestHref = site.forms.join;
 
   return (
     <NotebookPage>
-      <div className="space-y-20 sm:space-y-24">
-        <ProgramHero
-          program={program}
-          annotation="Curiosity was already there."
-        />
-
-        <SketchDivider label="why" />
-        <TextBlockSection
-          id="gaa-why"
-          title="Why it exists"
-          annotation="A welcoming space to learn."
-        >
-          {program.originNote ? <p>{program.originNote}</p> : null}
-          {program.whyExists ? <p>{program.whyExists}</p> : null}
-        </TextBlockSection>
-
-        <TextBlockSection id="gaa-mission" title="Mission">
-          <p>{program.mission}</p>
-        </TextBlockSection>
-
-        {program.vision ? (
-          <TextBlockSection id="gaa-vision" title="Vision">
-            <p>{program.vision}</p>
-          </TextBlockSection>
-        ) : null}
-
-        <StringListSection
-          id="gaa-opportunities"
-          title="Opportunities"
-          items={program.opportunities}
-          annotation="Programs and next steps"
-        />
+      <div className="lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-start lg:gap-12 xl:gap-16">
+        <IdentityRail content={content} requestHref={requestHref} />
+        <div className="mt-12 space-y-16 sm:space-y-20 lg:mt-0">
+          <ShareSection content={content} />
+          <ConnectSection content={content} />
+          <InspiredSection content={content} />
+          <TogetherSection content={content} />
+        </div>
       </div>
     </NotebookPage>
   );
